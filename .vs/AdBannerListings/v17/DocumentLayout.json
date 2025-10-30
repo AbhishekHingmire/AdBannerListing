@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Repos\\Web\\AdBannerListings\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{44950305-4E02-43E7-9315-832C14982C17}|AdBannerListings.csproj|c:\\repos\\web\\adbannerlistings\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{44950305-4E02-43E7-9315-832C14982C17}|AdBannerListings.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{44950305-4E02-43E7-9315-832C14982C17}|AdBannerListings.csproj|c:\\repos\\web\\adbannerlistings\\views\\banner\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{44950305-4E02-43E7-9315-832C14982C17}|AdBannerListings.csproj|solutionrelative:views\\banner\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Repos\\Web\\AdBannerListings\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Repos\\Web\\AdBannerListings\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAABcAAAAAAAAAAAArwCEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-30T16:16:33.56Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -30,13 +47,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Repos\\Web\\AdBannerListings\\Views\\Banner\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Banner\\Index.cshtml",
               "ToolTip": "C:\\Repos\\Web\\AdBannerListings\\Views\\Banner\\Index.cshtml",
               "RelativeToolTip": "Views\\Banner\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-30T14:19:51.824Z",
               "EditorCaption": ""

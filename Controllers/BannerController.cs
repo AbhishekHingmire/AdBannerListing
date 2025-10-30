@@ -8,16 +8,30 @@ namespace AdBannerListings.Controllers
     public class BannerController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<BannerController> _logger;
 
-        public BannerController(ApplicationDbContext context)
+        public BannerController(ApplicationDbContext context, ILogger<BannerController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: Banner
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Banners.ToListAsync());
+            try
+            {
+                _logger.LogInformation("Loading banner list");
+                var banners = await _context.Banners.ToListAsync();
+                _logger.LogInformation($"Found {banners.Count} banners");
+                return View(banners);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error loading banners");
+                ViewBag.ErrorMessage = $"Database error: {ex.Message}";
+                return View(new List<Banner>());
+            }
         }
 
         // GET: Banner/Details/5
@@ -49,14 +63,24 @@ namespace AdBannerListings.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,ImageURL,RedirectURL,Latitude,Longitude,Radius")] Banner banner)
         {
-            if (ModelState.IsValid)
+            try
             {
-                banner.Id = Guid.NewGuid();
-                _context.Add(banner);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    banner.Id = Guid.NewGuid();
+                    _context.Add(banner);
+                    await _context.SaveChangesAsync();
+                    _logger.LogInformation($"Created new banner with ID: {banner.Id}");
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(banner);
             }
-            return View(banner);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating banner");
+                ModelState.AddModelError("", $"Error creating banner: {ex.Message}");
+                return View(banner);
+            }
         }
 
         // GET: Banner/Edit/5
